@@ -4,7 +4,7 @@ class Blog < ApplicationRecord
 
   has_many :comments
 
-  after_commit :create_fake_comments, only: :create
+  after_commit :create_fake_comments, on: :create
 
   private
 

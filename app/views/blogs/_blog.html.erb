@@ -1,4 +1,5 @@
-<li>
+<%= turbo_stream_from blog %>
+<li id="<%= dom_id(blog) %>">
   <strong><%= blog.title %></strong> - <%= blog.content %>
   <%= render 'blogs/comments', blog: blog %>
 </li>
