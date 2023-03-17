@@ -1,13 +1,6 @@
 <ul>
   <% @blogs.each do |blog| %>
-    <li>
-      <strong><%= blog.title %></strong> - <%= blog.content %>
-      <ul>
-        <% blog.comments.each do |comment| %>
-          <li><%= comment.content %></li>
-        <% end %>
-      </ul>
-    </li>
+    <%= render blog %>
   <% end %>
 </ul>
 <%= simple_form_for @blog do |f| %>
