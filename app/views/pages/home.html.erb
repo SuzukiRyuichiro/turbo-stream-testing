@@ -2,6 +2,11 @@
   <% @blogs.each do |blog| %>
     <li>
       <strong><%= blog.title %></strong> - <%= blog.content %>
+      <ul>
+        <% blog.comments.each do |comment| %>
+          <li><%= comment.content %></li>
+        <% end %>
+      </ul>
     </li>
   <% end %>
 </ul>
