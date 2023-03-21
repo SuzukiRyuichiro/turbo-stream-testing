@@ -1,5 +1,9 @@
-<ul id="comments-for-blog-<%= blog.id %>">
-  <% blog.comments.each do |comment| %>
-    <li><%= comment.content %></li>
-  <% end %>
-</ul>
+<% if blog.comments.empty? %>
+  <p>loading</p>
+<% else %>
+  <ul id="comments-for-blog-<%= blog.id %>">
+    <% blog.comments.each do |comment| %>
+      <li><%= comment.content %></li>
+    <% end %>
+  </ul>
+<% end %>
